@@ -1,0 +1,15 @@
+# Dependencies
+contact-form-api/node_modules/
+contact-form-api/npm-debug.log
+
+# Environment variables (NEVER commit these!)
+contact-form-api/.env
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
