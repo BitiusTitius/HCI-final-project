@@ -99,21 +99,26 @@ body.dark-mode .logo img {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--accent) 0%, #004d99 100%);
-    color: white;
-    padding: 4rem 2rem;
+    background-image:
+        linear-gradient(var(--overlay-dark), var(--overlay-dark)),
+        url("img/background2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-inverse);
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: var(--text-inverse);
 }
 
 .container {
