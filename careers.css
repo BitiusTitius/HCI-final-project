@@ -122,6 +122,12 @@ body.dark-mode .logo img {
     color: var(--text-inverse);
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem 2rem;
+}
+
 section {
     margin-bottom: 4rem;
 }
