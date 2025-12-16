@@ -52,10 +52,12 @@ nav {
     padding: 1rem 2rem;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--accent);
+.logo img {
+    height: 70px;
+}
+
+body.dark-mode .logo img {
+    filter: invert(1) brightness(1.4);
 }
 
 .nav-links {
