@@ -37,6 +37,22 @@
     color: var(--accent);
 }
 
+.dark-mode-toggle {
+    background: none;
+    border: 2px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
 body.dark-mode {
     --bg-primary: #1a1a1a;
     --bg-secondary: #2d2d2d;
