@@ -5,51 +5,74 @@
 }
 
 :root {
+    /* Backgrounds */
     --bg-primary: #ffffff;
     --bg-secondary: #f8f9fa;
+
+    /* Text */
     --text-primary: #212529;
     --text-secondary: #6c757d;
-    --accent: #0066cc;
+    --text-inverse: #ffffff;
+
+    /* Accent */
+    --accent-primary: #0066cc;
     --accent-hover: #0052a3;
-    --border: #dee2e6;
-    --shadow: rgba(0, 0, 0, 0.1);
+
+    /* UI */
+    --border-color: #dee2e6;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+
+    /* Overlay */
+    --overlay-dark: rgba(0, 0, 0, 0.45);
 }
 
 body.dark-mode {
     --bg-primary: #1a1a1a;
     --bg-secondary: #2d2d2d;
+
     --text-primary: #e9ecef;
     --text-secondary: #adb5bd;
-    --accent: #4da3ff;
+
+    --accent-primary: #4da3ff;
     --accent-hover: #3388ff;
-    --border: #404040;
-    --shadow: rgba(0, 0, 0, 0.3);
+
+    --border-color: #404040;
+    --shadow-light: rgba(0, 0, 0, 0.3);
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--text-primary);
     background-color: var(--bg-primary);
+    color: var(--text-primary);
     transition: background-color 0.3s, color 0.3s;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 header {
     background-color: var(--bg-secondary);
-    box-shadow: 0 2px 4px var(--shadow);
+    box-shadow: 0 2px 4px var(--shadow-light);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.3s;
 }
 
 nav {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
+    padding: 1rem 2rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
 }
 
 .logo img {
@@ -60,43 +83,38 @@ body.dark-mode .logo img {
     filter: invert(1) brightness(1.4);
 }
 
-
 .nav-links {
-    display: flex;
-    gap: 2rem;
     list-style: none;
+    display: flex;
     align-items: center;
+    gap: 2rem;
 }
 
 .nav-links a {
     text-decoration: none;
+    font-weight: 500;
     color: var(--text-primary);
     transition: color 0.3s;
-    font-weight: 500;
 }
 
-.nav-links a:hover {
-    color: var(--accent);
-}
-
+.nav-links a:hover,
 .nav-links a.active {
-    color: var(--accent);
+    color: var(--accent-primary);
 }
 
 .dark-mode-toggle {
     background: none;
-    border: 2px solid var(--border);
-    color: var(--text-primary);
-    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-color);
+    padding: 0.4rem 0.9rem;
     border-radius: 20px;
     cursor: pointer;
-    transition: all 0.3s;
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .dark-mode-toggle:hover {
-    background-color: var(--accent);
-    color: white;
-    border-color: var(--accent);
+    background-color: var(--accent-primary);
+    color: var(--text-inverse);
 }
 
 .hero {
