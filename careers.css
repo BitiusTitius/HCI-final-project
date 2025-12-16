@@ -5,39 +5,25 @@
 }
 
 :root {
-    /* Backgrounds */
     --bg-primary: #ffffff;
     --bg-secondary: #f8f9fa;
-
-    /* Text */
     --text-primary: #212529;
     --text-secondary: #6c757d;
-    --text-inverse: #ffffff;
-
-    /* Accent */
-    --accent-primary: #0066cc;
+    --accent: #0066cc;
     --accent-hover: #0052a3;
-
-    /* UI */
-    --border-color: #dee2e6;
-    --shadow-light: rgba(0, 0, 0, 0.1);
-
-    /* Overlay */
-    --overlay-dark: rgba(0, 0, 0, 0.45);
+    --border: #dee2e6;
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode {
     --bg-primary: #1a1a1a;
     --bg-secondary: #2d2d2d;
-
     --text-primary: #e9ecef;
     --text-secondary: #adb5bd;
-
-    --accent-primary: #4da3ff;
+    --accent: #4da3ff;
     --accent-hover: #3388ff;
-
-    --border-color: #404040;
-    --shadow-light: rgba(0, 0, 0, 0.3);
+    --border: #404040;
+    --shadow: rgba(0, 0, 0, 0.3);
 }
 
 body {
