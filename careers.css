@@ -120,7 +120,7 @@ body.dark-mode .logo img {
 .hero {
     background-image:
         linear-gradient(var(--overlay-dark), var(--overlay-dark)),
-        url("img/background1.jpg");
+        url("img/background3.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
