@@ -1,22 +1,52 @@
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById('darkModeToggle');
-const body = document.body;
+/* ======================================================
+DARK MODE FUNCTIONALITY
+====================================================== */
 
-// Check for saved dark mode preference
-const darkMode = localStorage.getItem('darkMode');
-if (darkMode === 'enabled') {
-    body.classList.add('dark-mode');
-    darkModeToggle.textContent = '☀️ Light Mode';
+// Cache DOM elements
+const body = document.body;
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+// Key used to store theme preference
+const DARK_MODE_KEY = "darkMode";
+
+// ======================================================
+// INITIAL STATE CHECK
+// ======================================================
+
+// Apply saved dark mode preference on page load
+if (localStorage.getItem(DARK_MODE_KEY) === "enabled") {
+    enableDarkMode();
 }
 
-darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+// ======================================================
+// EVENT LISTENERS
+// ======================================================
 
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('darkMode', 'enabled');
-        darkModeToggle.textContent = '☀️ Light Mode';
+// Toggle dark mode when button is clicked
+darkModeToggle.addEventListener("click", () => {
+    const isDarkModeActive = body.classList.contains("dark-mode");
+
+    if (isDarkModeActive) {
+        disableDarkMode();
     } else {
-        localStorage.setItem('darkMode', 'disabled');
-        darkModeToggle.textContent = '🌙 Dark Mode';
+        enableDarkMode();
     }
 });
+
+// ======================================================
+// HELPER FUNCTIONS
+// ======================================================
+
+// Enable dark mode styles and update UI
+function enableDarkMode() {
+    body.classList.add("dark-mode");
+    localStorage.setItem(DARK_MODE_KEY, "enabled");
+    darkModeToggle.textContent = "☀️ Light Mode";
+}
+
+// Disable dark mode styles and update UI
+function disableDarkMode() {
+    body.classList.remove("dark-mode");
+    localStorage.setItem(DARK_MODE_KEY, "disabled");
+    darkModeToggle.textContent = "🌙 Dark Mode";
+}
